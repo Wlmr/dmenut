@@ -4,7 +4,9 @@
 dmenut - dynamic menu
 ====================
 dmenut is an efficient dynamic menu for X.
-dmenut is also sane, compared to its father dmenu since Tab does what the right arrow did for dmenus father. If you don't like this idea you may be excused. Goodbye!
+dmenut is also relatively sane compared to its father dmenu since Tab does what the right arrow did for dmenus father. If you don't like this idea you can leave. 
+
+
 
 Requirements
 ------------
