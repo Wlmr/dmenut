@@ -4,8 +4,8 @@
 dmenut - dynamic menu
 ====================
 dmenut is an efficient dynamic menu for X.
-dmenut is also relatively sane compared to its father dmenu since Tab does what the right arrow did for dmenus father. If you don't like this idea you can leave. 
 
+This fork changes only one key mapping -- yes, you read that right! -- and is hence pretty pathetic so please, go ahead and laugh at my neurotic traits.
 
 
 Requirements
