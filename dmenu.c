@@ -298,7 +298,7 @@ keypress(XKeyEvent *ev)
 	len = XmbLookupString(xic, ev, buf, sizeof buf, &ksym, &status);
 	if (status == XBufferOverflow)
 		return;
-	if (ev->state & ControlMask)
+  if (ev->state & ControlMask)
 		switch(ksym) {
 		case XK_a: ksym = XK_Home;      break;
 		case XK_b: ksym = XK_Left;      break;
@@ -449,6 +449,12 @@ keypress(XKeyEvent *ev)
 	case XK_Tab:
 		if (sel && sel->right && (sel = sel->right) == next) {
 			curr = next;
+			calcoffsets();
+		}
+		break;
+  case XK_ISO_Left_Tab:
+		if (sel && sel->left && (sel = sel->left)->right == curr) {
+			curr = prev;
 			calcoffsets();
 		}
 		break;
