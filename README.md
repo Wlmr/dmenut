@@ -5,8 +5,11 @@ dmenut - dynamic menu
 ====================
 dmenut is an efficient dynamic menu for X.
 
-This fork changes only one key mapping -- yes, you read that right! -- and is hence pretty pathetic so please, go ahead and laugh at my neurotic traits.
+This fork changes only a few key mappings -- yes, you read that right! -- and is hence pretty pathetic so please, go ahead and laugh at my neurotic traits.
 
+It also changes the font and colors to match my wm.
+
+The font in question is artwiz cure-8.
 
 Requirements
 ------------
