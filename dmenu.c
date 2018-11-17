@@ -35,7 +35,7 @@ struct item {
 
 static char text[BUFSIZ] = "";
 static char *embed;
-static int bh, mw, mh;
+static int bh, bhExtra, mw, mh;
 static int inputw = 0, promptw;
 static int lrpad; /* sum of left and right padding */
 static size_t cursor;
@@ -565,7 +565,7 @@ setup(void)
 	utf8 = XInternAtom(dpy, "UTF8_STRING", False);
 
 	/* calculate menu geometry */
-	bh = drw->fonts->h + 2;
+	bh = drw->fonts->h + 2 + bhExtra;
 	lines = MAX(lines, 0);
 	mh = (lines + 1) * bh;
 #ifdef XINERAMA
@@ -653,6 +653,7 @@ main(int argc, char *argv[])
 {
 	XWindowAttributes wa;
 	int i, fast = 0;
+        bhExtra = 0;
 
 	for (i = 1; i < argc; i++)
 		/* these options take no arguments */
@@ -687,6 +688,8 @@ main(int argc, char *argv[])
 			colors[SchemeSel][ColFg] = argv[++i];
 		else if (!strcmp(argv[i], "-w"))   /* embedding window id */
 			embed = argv[++i];
+                else if (!strcmp(argv[i], "-bh"))
+                        bhExtra = atoi(argv[++i]);
 		else
 			usage();
 
